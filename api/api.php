@@ -63,7 +63,7 @@ switch ($param)
          break;
 
        case '3': 
-            $sql = 'SELECT *,(SELECT name from country WHERE id=`country_id`) as country_name,(SELECT name from district WHERE id = `dist_id`) as dist_name,(SELECT name from upzilla WHERE id=`up_id`) as up_name, (SELECT name from village WHERE id=`village_id`) as village_name,(SELECT name from word WHERE id=`word_id`) as ward_name FROM user_infos WHERE is_active = 1 ORDER BY id DESC';
+            $sql = 'SELECT *,(SELECT name from country WHERE id=`country_id`) as country_name,(SELECT name from district WHERE id = `district_id`) as dist_name,(SELECT name from upzilla WHERE id=`upzilla_id`) as up_name, (SELECT name from village WHERE id=`village_id`) as village_name,(SELECT name from word WHERE id=`word_id`) as ward_name,(SELECT name from division WHERE id=`division_id`) as division_name FROM user_infos WHERE is_active = 1 ORDER BY id DESC';
             // $sql = 'SELECT * FROM '.$table.' WHERE status = 1 ORDER BY id DESC';
               $return_data = getHTML_empTable($sql,true);
         break;
@@ -146,6 +146,7 @@ switch ($param)
                                 <td> '.$row['email'].' </td> 
                                 <td> '.$row['contact'].' </td>
                                 <td> '.$row['country_name'].' </td> 
+                                <td> '.$row['division_name'].' </td>
                                 <td> '.$row['dist_name'].' </td> 
                                 <td> '.$row['up_name'].' </td> 
                                 <td> '.$row['village_name'].' </td> 
