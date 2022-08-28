@@ -68,7 +68,7 @@ $(document).ready(function() {
             data: {
                'req': '5',
                'param': '2',
-               'filter': 'post_id = ' + upzilla
+               'filter': 'p_id = ' + upzilla
             },
             dataType: "json",
             success: function(result) {
@@ -86,7 +86,7 @@ $(document).ready(function() {
             data: {
                'req': '6',
                'param': '2',
-               'filter': 'word_id = ' + post_office
+               'filter': 'w_id = ' + post_office
             },
             dataType: "json",
             success: function(result) {
@@ -104,7 +104,7 @@ $(document).ready(function() {
             data: {
                'req': '7',
                'param': '2',
-               'filter': 'village_id = ' + word
+               'filter': 'villa_id = ' + word
             },
             dataType: "json",
             success: function(result) {
